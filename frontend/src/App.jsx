@@ -7,7 +7,7 @@ function App() {
   const [refresh, setrefresh] = useState(false)
 
   const fetchAndStore = () => {
-    fetch('http://localhost:5100/fetch-and-store')
+    fetch('https://quadb-m1hp.onrender.com/fetch-and-store')
       .then((response) => response.json())
       .then((data) => {
         console.log('Data from API:', data)
@@ -18,7 +18,7 @@ function App() {
   }
 
   const fetchDataFromDB = () => {
-    fetch('http://localhost:5100/getData')
+    fetch('https://quadb-m1hp.onrender.com/getData')
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
