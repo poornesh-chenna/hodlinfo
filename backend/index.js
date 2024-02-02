@@ -13,6 +13,7 @@ const port = 5100
 
 const dbUrl =
   'postgresql://poorneshchenna29:0PnousKlyh6c@ep-patient-dust-41051177.ap-southeast-1.aws.neon.tech/quadb?sslmode=require'
+
 const pool = new Pool({
   connectionString: dbUrl,
 })
@@ -59,5 +60,5 @@ app.get('/getData', async (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`)
+  console.log(`Server is running on ${port}`)
 })
