@@ -20,6 +20,10 @@ const pool = new Pool({
 
 app.use(express.json())
 
+app.get('/', (req, res) => {
+  res.status(200).send('Server is up and running')
+})
+
 app.get('/fetch-and-store', async (req, res) => {
   try {
     const apiResponse = await axios.get('https://api.wazirx.com/api/v2/tickers')
@@ -60,5 +64,5 @@ app.get('/getData', async (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Server is running on ${port}`)
+  console.log(`Server is running on port:${port}`)
 })
